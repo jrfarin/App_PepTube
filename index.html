@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PepTube Video</title>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, width=device-width">
+    
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/themes/VideoChannel.min.css">
+	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css">
+    <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+
+    <div data-role="page" id="main">
+        <div data-role="header">
+            <h1>PepTube Chanel</h1>
+            <a href="#options" data-icon="bars" data-iconpos="notext" class="ui-btn-right">Opciones</a>
+        </div>
+        <div data-role="content">
+            <img id="logo" src="img/logo.png">
+            <div id="showVideo"></div>
+            <ul id="vidlist" data-role="listview"></ul>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h4>PepTube Channel &copy; 2015</h4>
+        </div>
+
+        <div data-role="popup" data-dismissible="false" class="ui-corner-all" id="popupDialog">
+            <div data-role="header">
+                <h1>Añadir Canal</h1>
+            </div>
+            <div data-role="content">
+                <h3 class="ui-title">Entra el nombre del Canal</h3>
+                <input type="text" id="channelName" placeholder="Nombre del Canal">
+                <a href="#" data-role="button" data-inline="true" data-rel="back" id="channelBtnCancel">Cancelar</a>
+                <a href="#" data-role="button" data-inline="true" data-rel="back" data-transition="flow" id="channelBtnOK">OK</a>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="page" id="options">
+        <div data-role="header">
+            <a href="#main" data-rel="back" data-icon="delete">Cancelar</a>
+            <h1>Opciones</h1>
+            <a href="#" data-icon="check" id="saveOptions">Guardar</a>  
+        </div>
+
+        <div data-role="content">
+            <div data-role="fieldcontain">
+                <label for="channelNameOptions">Nombre del Canal:</label>
+                <input type="text" name="channelNameOptions" id="channelNameOptions" placeholder="Escribe el nombre del Canal">
+                <br>
+                <div class="ui-input-btn ui-btn ui-corner-all ui-shadow">
+                    Borrar Canal
+                    <input type="button" id="clearChannel" data-corners="false" data-enhanced="true" value="Borrar Canal">
+                </div>
+            </div>
+            <div data-role="fieldcontain">
+                <label for="maxResultsOptions">Número de descargas:</label>
+                <input type="text" name="maxResultsOptions" id="maxResultsOptions" placeholder="Cuantos Vídeos quieres descargar?">
+            </div>   
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <h4>PepTube Channel &copy; 2015</h4>
+        </div>
+    </div>
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="cordova.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
+        
